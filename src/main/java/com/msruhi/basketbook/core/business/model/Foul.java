@@ -2,6 +2,7 @@ package com.msruhi.basketbook.core.business.model;
 
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
+import lombok.NonNull;
 import lombok.ToString;
 /**
  * 
@@ -12,7 +13,9 @@ import lombok.ToString;
 @ToString
 @EqualsAndHashCode(callSuper = true)
 public class Foul extends Event{
+	@NonNull
 	private Player player;
+	@NonNull
 	private Type foulType;
 	
 	/**
@@ -21,7 +24,7 @@ public class Foul extends Event{
 	 * @param player
 	 * @param foulType
 	 */
-	public Foul(GameTime gameTime, Correction correction, Player player, Type foulType) {
+	public Foul(@NonNull GameTime gameTime, @NonNull Correction correction, @NonNull Player player, @NonNull Type foulType) {
 		super(gameTime, correction);
 		this.player = player;
 		this.foulType = foulType;

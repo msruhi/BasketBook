@@ -2,6 +2,7 @@ package com.msruhi.basketbook.core.business.model;
 
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
+import lombok.NonNull;
 import lombok.ToString;
 /**
  * 
@@ -18,10 +19,10 @@ public class TimeOut extends Event{
 	 * @param correction
 	 * @param team
 	 */
-	public TimeOut(GameTime gameTime, Correction correction, Team team) {
+	public TimeOut(GameTime gameTime, Correction correction, @NonNull Team team) {
 		super(gameTime, correction);
 		this.team = team;
 	}
-
+	@NonNull
 	private Team team;
 }
