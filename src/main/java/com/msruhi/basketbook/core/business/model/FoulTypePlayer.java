@@ -1,5 +1,5 @@
-package com.msruhi.basketbook.business.model;
+package com.msruhi.basketbook.core.business.model;
 
-public enum FoulType {
+public enum FoulTypePlayer {
 	TECHNISCHES_FOUL, PERSOENLICHES_FOUL, UNSPORTLICHES_FOUL, OFFENSIV_FOUL, DOPPEL_FOUL, DISQUALIFIZIERUNG;
 }

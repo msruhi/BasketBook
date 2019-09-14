@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.msruhi</groupId>
-	<artifactId>BasketBook</artifactId>
+	<artifactId>basketbook-core</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>BasketBook</name>
 	<description>Demo project for Spring Boot</description>

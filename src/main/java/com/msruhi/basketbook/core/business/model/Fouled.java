@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.msruhi.basketbook.business.model;
+package com.msruhi.basketbook.core.business.model;
 
 /**
  * @author "Ruhi, Mehmet Sezgin"

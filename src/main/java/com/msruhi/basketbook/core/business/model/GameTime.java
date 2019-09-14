@@ -1,4 +1,4 @@
-package com.msruhi.basketbook.business.model;
+package com.msruhi.basketbook.core.business.model;
 
 import java.time.LocalTime;
 

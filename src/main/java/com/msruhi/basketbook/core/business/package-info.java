@@ -5,4 +5,4 @@
  * @author Ruhi, Mehmet Sezgin
  *
  */
-package com.msruhi.basketbook.business;
+package com.msruhi.basketbook.core.business;
