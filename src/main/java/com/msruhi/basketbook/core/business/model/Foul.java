@@ -25,7 +25,7 @@ public class Foul extends Event{
 	 * @param foulType
 	 */
 	public Foul(@NonNull GameTime gameTime, @NonNull Correction correction, @NonNull Player player, @NonNull Type foulType) {
-		super(gameTime, correction);
+		super("Foul(" + foulType.toString() + ")", gameTime, correction);
 		this.player = player;
 		this.foulType = foulType;
 	}

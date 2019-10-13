@@ -1,9 +1,13 @@
-package com.msruhi.basketbook.core.business.model;
+package com.msruhi.basketbook.core.business.usecases.score.entity;
 
 import javax.validation.constraints.Min;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
+import com.msruhi.basketbook.core.business.model.Correction;
+import com.msruhi.basketbook.core.business.model.Event;
+import com.msruhi.basketbook.core.business.model.GameTime;
+import com.msruhi.basketbook.core.business.model.Player;
 import com.msruhi.basketbook.core.configs.PointProperties;
 
 import lombok.EqualsAndHashCode;
@@ -20,25 +24,22 @@ import lombok.ToString;
 @ToString
 @EqualsAndHashCode(callSuper = true)
 public class Point extends Event {
-	
+
 	@Autowired
 	PointProperties pointProperties;
-	
+
 	/**
 	 * @param gameTime
 	 * @param correction
-	 * @param pointValue
 	 * @param player
 	 */
-	public Point(GameTime gameTime, Correction correction, @NonNull Player player, @NonNull String pointName) {
-		super(gameTime, correction);
-		this.pointValue = pointProperties.getPointProperties()
-											.stream()
-											.flatMap(pointProperty -> pointPropertyList.)
-											.filter();
+	public Point(@NonNull final String pointName, @NonNull GameTime gameTime, @NonNull Correction correction,
+			@NonNull Player player) {
+		super("Point(" + pointName + ")", gameTime, correction);
 		this.player = player;
+		pointValue = pointProperties.getValue(pointName);
 	}
-	
+
 	@NonNull
 	private Player player;
 	@NonNull

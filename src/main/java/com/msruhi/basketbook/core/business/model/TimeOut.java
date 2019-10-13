@@ -20,7 +20,7 @@ public class TimeOut extends Event{
 	 * @param team
 	 */
 	public TimeOut(GameTime gameTime, Correction correction, @NonNull Team team) {
-		super(gameTime, correction);
+		super("Timeout(" + team.getName() + ")", gameTime, correction);
 		this.team = team;
 	}
 	@NonNull

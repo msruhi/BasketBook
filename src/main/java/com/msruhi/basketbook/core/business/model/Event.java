@@ -1,5 +1,6 @@
 package com.msruhi.basketbook.core.business.model;
 
+import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NonNull;
@@ -12,19 +13,14 @@ import lombok.ToString;
 @Getter
 @ToString
 @EqualsAndHashCode
+@AllArgsConstructor
 public abstract class Event {
 	@NonNull
-	private GameTime gameTime;
+	private String eventName;
 	@NonNull
+	private GameTime gameTime;
+	
     private Correction correction;
-	/**
-	 * @param gameTime
-	 * @param correction
-	 */
-	public Event(@NonNull GameTime gameTime, @NonNull Correction correction) {
-		this.gameTime = gameTime;
-		this.correction = correction;
-	}
 	
 	
 }
